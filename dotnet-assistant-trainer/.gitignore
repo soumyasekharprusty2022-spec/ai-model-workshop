@@ -205,7 +205,6 @@ unsloth_compiled_cache/
 # Training scripts (local development)
 unsloth_phi3.py
 unsloth_phi3-1.py
-UnsLoth_Phi3Mini_Ollama.ipynb
 *.gguf.tmp
 *.gguf.part
 
