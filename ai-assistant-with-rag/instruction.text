@@ -1,0 +1,11 @@
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+
+ollama pull phi3:mini        # one-time, if you haven't already
+ollama serve                 # run this in a separate terminal/tab — it blocks
+
+python -m src.ingest         # embeddings only, doesn't need Ollama, but harmless either way
+python -m eval.evaluate      # this DOES call the LLM via generator.py — needs ollama serve running
+python app.py  
